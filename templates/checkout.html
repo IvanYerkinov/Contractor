@@ -2,19 +2,27 @@
 
 {% block content %}
 
-    {% for item in cart %}
-        <img src="{{ item['img_url'] }}" alt="{{ item['name'] }}" height="86" width="62">
-        <p>{{item['name']}}</p>
-        <p>${{item['price']}}</p>
-        <form method="post" action="">
-            <button type="submit" name="button">Remove from cart</button>
-        </form>
-        <br>
+<table>
+    {% for item in mcart %}
+        <td>
+            <img src="{{ item['img_url'] }}" alt="{{ item['name'] }}" height="86" width="62">
+            <p>{{item['name']}}</p>
+            <p>${{item['price']}}</p>
+            <form method="post" action=" {{ url_for('remcart', item_id = item['_id']) }}">
+                <button type="submit" name="button">Remove from cart</button>
+            </form>
+            <br>
+        </td>
     {% endfor %}
+</table>
+
+
+    <p style="font-size:130%;">Total price: {{var}}</p>
+
     <form method="post" action="">
         <button type="submit" name="button">Purchase</button>
     </form>
-    <form method="post" action="">
+    <form method="post" action="/emptycart">
         <button type="submit" name="button">Empty cart</button>
     </form>
     <br>

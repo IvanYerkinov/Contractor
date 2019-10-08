@@ -2,10 +2,13 @@
 <html>
 <head>
     <title>Schlock Stop</title>
-    <p style="font-size:140%;">Schlock Stop</p>
+    <p style="font-size:160%;">Schlock Stop</p>
 </head>
 
 <body>
+    <form method="post" action="/cart">
+        <button type="submit" name="button" >Cart</button>
+    </form>
     <p>Test</p>
     {% block content %}{% endblock %}
 </body>
