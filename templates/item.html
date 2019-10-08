@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<img src="{{ item['img_url'] }}" alt="{{ item['name'] }}" height="516" width="372">
+<p style="font-size:180%;">{{ item['name'] }}</p>
+<p style="font-size:140%;">${{ item['price'] }}</p>
+<form method="post" action="{{ url_for('cart', item_id = item['_id']) }}">
+    <button type="submit" name="button" >Add to cart</button>
+</form>
+<form method="post" action="/">
+    <button type="submit" name="button" >Return</button>
+</form>
+{% endblock %}

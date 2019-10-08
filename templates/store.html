@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>Test2</p>
+    <table>
+        {% for item in items %}
+        <td>
+            <img src="{{item['img_url']}}" alt="{{item['name']}}" height="172" width="124">
+            <p>{{item['name']}}</p>
+            <p>${{item['price']}}</p>
+            <form method="post" action="{{ url_for('show', item_id = item['_id']) }}">
+                <button type="submit" name="button">View movie</button>
+            </form>
+            <form method="post" action="{{ url_for('cart', item_id = item['_id']) }}">
+                <button type="submit" name="button" >Add to cart</button>
+            </form>
+        </td>
+        {% endfor %}
+    </table>
+{% endblock %}

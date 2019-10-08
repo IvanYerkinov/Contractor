@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for item in cart %}
+        <img src="{{ item['img_url'] }}" alt="{{ item['name'] }}" height="86" width="62">
+        <p>{{item['name']}}</p>
+        <p>${{item['price']}}</p>
+        <form method="post" action="">
+            <button type="submit" name="button">Remove from cart</button>
+        </form>
+        <br>
+    {% endfor %}
+    <form method="post" action="">
+        <button type="submit" name="button">Purchase</button>
+    </form>
+    <form method="post" action="">
+        <button type="submit" name="button">Empty cart</button>
+    </form>
+    <br>
+    <form method="post" action="/">
+        <button type="submit" name="button">Continue shopping</button>
+    </form>
+
+
+{% endblock %}
