@@ -17,9 +17,10 @@ mycart.drop()
 
 item = {"name": "", "price": 0, "img_url": ""}
 
-items.insert_one({"name": "Con Air", "price": 30.00, "img_url": "https://m.media-amazon.com/images/M/MV5BMGZmNGIxMTYtMmVjMy00YzhkLWIyOTktNTExZGFiYjNiNzdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg"})
-items.insert_one({"name": "Ghosterbusters II", "price": 35.00, "img_url": "https://vignette.wikia.nocookie.net/ghostbusters/images/8/8d/GhostbustersIIStorybookByScholasticSc01.png/revision/latest?cb=20170222172348"})
-items.insert_one({'name': 'Manos the Hands of Fate', 'price': 25.00, 'img_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Manosposter.jpg/220px-Manosposter.jpg'})
+items.insert_one({"name": "Con Air", "price": 9.99, "img_url": "https://m.media-amazon.com/images/M/MV5BMGZmNGIxMTYtMmVjMy00YzhkLWIyOTktNTExZGFiYjNiNzdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg"})
+items.insert_one({"name": "Double Down", "price": 9.99, "img_url": "https://horrornews.net/wp-content/uploads/2017/12/Double-Down-2005-movie-Neil-Breen-4.jpg"})
+items.insert_one({'name': 'Manos the Hands of Fate', 'price': 9.99, 'img_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Manosposter.jpg/220px-Manosposter.jpg'})
+items.insert_one({'name': 'The Room', 'price': 9.99, 'img_url': 'https://images.gowatchit.com/posters/original/THE_ROOM.jpg'})
 
 
 def getPrice():
